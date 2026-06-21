@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container{
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        h1{
+            text-align: center;
+            color: darkblue;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            border-radius: 8px;
+        }
+
+        .gender input,
+        .skills input{
+            width: auto;
+        }
+
+        .button{
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            background: darkblue;
+        }
+
+        .reset{
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reset:hover{
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Student ID</label>
+        <input type="text" placeholder="Enter ID">
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="01XXXXXXXXX">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter address"></textarea>
+
+        <label>Department</label>
+        <select>
+            <option>Select Department</option>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>BBA</option>
+            <option>Civil Engineering</option>
+            <option>English</option>
+        </select>
+
+        <div class="gender">
+            <label>Gender</label><br><br>
+
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <br>
+
+        <div class="skills">
+            <label>Skills</label><br><br>
+
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+            <input type="checkbox"> C Programming
+            <input type="checkbox"> Python
+        </div>
+
+        <br>
+
+        <label>Favorite Color</label>
+        <input type="color">
+
+        <label>Upload Profile Photo</label>
+        <input type="file">
+
+        <label>Website URL</label>
+        <input type="url" placeholder="https://example.com">
+
+        <label>Comments</label>
+        <textarea rows="4" placeholder="Write something..."></textarea>
+
+        <input type="submit" value="Submit" class="button">
+
+        <input type="reset" value="Reset" class="reset">
+
+    </form>
+
+</div>
+
+</body>
+</html>
