@@ -3,213 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libreary membership Regestration Form</title>
+    <title>ABC College | Welcome</title>
+    <!-- External CSS link matching the required filename -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h2> Library Membership Registation Form</h2>
 
-   <fieldset>
-            <legend>Personal Information</legend>
+    <!-- Fixed/Sticky Contact Button -->
+    <a href="#contact" class="fixed-contact-btn">Contact Us</a>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1 id="college-logo">ABC College</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#notices">Notice Board</a></li>
+                    <li><a href="#campus">Campus</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="content-wrapper">
+
+        <!-- Welcome Section -->
+        <section id="home" class="welcome-section">
+            <h2>Welcome to ABC College</h2>
+            <p>Empowering minds, shaping futures, and fostering excellence in education. Join our vibrant community of learners and innovators today.</p>
+            <button class="btn-primary">Apply Now</button>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section">
+            <h2 class="section-title">Our Featured Courses</h2>
+            <div class="courses-grid">
+                <!-- Course Card 1 with 'New' Badge -->
+                <div class="course-card">
+                    <span class="badge-new">New</span>
+                    <h3>Data Science & AI</h3>
+                    <p>Explore the future of intelligence with hands-on machine learning and advanced data analysis curriculum.</p>
+                </div>
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <h3>Computer Science</h3>
+                    <p>Build a strong foundation in software engineering, algorithms, and robust full-stack web development.</p>
+                </div>
+                <!-- Course Card 3 -->
+                <div class="course-card">
+                    <h3>Business Analytics</h3>
+                    <p>Bridge the gap between data and strategy to drive impactful decisions in modern corporate landscapes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notice Board Section -->
+        <section id="notices" class="notice-section">
+            <h2>Notice Board</h2>
+            <!-- Box demonstrating fixed height and overflow scroll -->
+            <div class="notice-board-box">
+                <div class="notice-item">
+                    <h4>Important: Mid-Term Examination Schedule</h4>
+                    <p>Published on: July 2, 2026. The mid-term examinations for the Fall semester will commence from next week. Please check your student portal for individual schedules.</p>
+                </div>
+                <hr>
+                <div class="notice-item">
+                    <h4>Annual Convocation 2026 Registration</h4>
+                    <p>Graduating students must complete their online registration for the upcoming convocation ceremony before the end of this month. Late submissions will not be entertained.</p>
+                </div>
+                <hr>
+                <div class="notice-item">
+                    <h4>Scholarship Applications Open</h4>
+                    <p>Applications for merit-based and need-based financial aid for the next academic year are now being accepted. Submit your documents to the registrar office.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Section -->
+        <section id="campus" class="campus-section">
+            <h2>Our Campus Life</h2>
+            <div class="campus-container">
+                <!-- Image Placeholder -->
+                <div class="campus-image-placeholder">
+                    <p>[ Campus Image Area ]</p>
+                </div>
+                <!-- Overlapping Information Box -->
+                <div class="campus-overlay-box">
+                    <h3>State-of-the-Art Infrastructure</h3>
+                    <p>Our campus provides modern labs, extensive libraries, and interactive spaces designed to enhance collaboration and creative learning experiences.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="main-footer">
+        <p class="footer-title">ABC College</p>
+        <p>Email: info@abccollege.edu | Phone: +1 (555) 123-4567</p>
+        <p class="footer-copyright">&copy; 2026 ABC College. All Rights Reserved.</p>
+    </footer>
 
-
-            <p>
-                <label for="fullname">Full Name:</label>
-                <input type="text"  id="fullname"   name="fullname"  placeholder="Enter Your Full Name"  required>
-            </p>
-
-
-            <p>
-                <label for="memberid>Membership ID:</label>
-                <input type="text" id="memberid" name="memberid" placeholder="e.g., ID-12345" required>
-            </p>
-
-
-            <p>
-                <label for="email">Email Adress:</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
-            </p>
-
-
-            <p>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
-            </p>
-
-
-            <p>
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
-            </p>
-
-
-            <p>
-                <label>Gender:</label>
-                <input type="radio" id="male" name="gender" value="Male">
-                <label for="male">Male</label>
-
-                
-                <input type="radio" id="female" name="gender" value="Female">
-                <label for="female">Female</label>
-                
-                <input type="radio" id="other" name="gender" value="Other">
-                <label for="other">Other</label>
-            </p>
-
-        </fieldset>
-
-
-
-  <fieldset>
-            <legend>Membership Information</legend>
-
-
-            <p>
-                <label for="membership_type">Membership Type:</label>
-                <select id="membership_type" name="membership_type">
-
-
-
-                    <option value="student" selected>Student</option>
-
-                    <option value="faculty">Faculty</option>
-
-                    <option value="researcher">Researcher</option>
-
-                    <option value="general">General Member</option>
-
-
-                </select>
-            </p>
-
-
-
-            <p>
-                <label for="library_section">Preferred Library Section:</label>
-
-                <select id="library_section" name="library_section">
-
-
-                    <option value="science_tech">Science & Technology</option>
-
-                    <option value="literature">Literature</option>
-
-                    <option value="business">Business Studies</option>
-
-                    <option value="history">History</option>
-
-                    <option value="arts_culture">Arts & Culture</option>
-
-
-                </select>
-            </p>
-
-
-        </fieldset>  <br>
-
-
-
-
-  <fieldset>
-            <legend>Reading Preferences</legend>
-
-            <p>Select Favorite Book Categories:</p>
-
-            <input type="checkbox"  id="cat_fiction"   name="category" value="Fiction">
-            <label for="cat_fiction">Fiction</label><br>
-
-            
-            <input type="checkbox" id="cat_nonfiction" name="category" value="Non-Fiction">
-            <label for="cat_nonfiction">Non-Fiction</label><br>
-
-            
-            <input type="checkbox" id="cat_science" name="category" value="Science">
-            <label for="cat_science">Science</label><br>
-
-            
-            <input type="checkbox" id="cat_tech" name="category" value="Technology">
-            <label for="cat_tech">Technology</label><br>
-
-            
-            <input type="checkbox" id="cat_biography" name="category" value="Biography">
-            <label for="cat_biography">Biography</label><br>
-
-            
-            <input type="checkbox" id="cat_history" name="category" value="History">
-            <label for="cat_history">History</label>
-
-
-  </fieldset><br>
-
-
-
-<fieldset>
-
-            <legend>Library Services</legend>
-            <p>Select Services You Want to Use:</p>
-
-
-
-            <input type="checkbox"  id="srv_borrow" name="services" value="Book Borrowing">
-            <label for="srv_borrow">Book Borrowing</label><br>
-            
-
-            <input type="checkbox" id="srv_digital" name="services" value="Digital Library Access">
-            <label for="srv_digital">Digital Library Access</label><br>
-
-            
-            <input type="checkbox" id="srv_room" name="services" value="Reading Room">
-            <label for="srv_room">Reading Room</label><br>
-
-            
-            <input type="checkbox" id="srv_research" name="services" value="Research Assistance">
-            <label for="srv_research">Research Assistance</label>
-
-
-        </fieldset><br>
-
-<fieldset>
-            <legend>Additional Information</legend>
-
-
-            <p>
-                <label for="address">Current Address:</label><br>
-                <textarea id="address" name="address" rows="3" cols="40" placeholder="Enter your full address"></textarea>
-            </p>
-
-
-
-            <p>
-                <label for="emergency_phone">Emergency Contact Number:</label>
-                <input type="tel" id="emergency_phone" name="emergency_phone" placeholder="Enter emergency contact">
-            </p>
-
-
-            <p>
-                <label for="reason">Reason for Joining the Library:</label><br>
-                <textarea id="reason" name="reason" rows="3" cols="40" placeholder="Why do you want to join?"></textarea>
-            </p>
-
-
-            <p>
-                <label for="suggestions">Suggestions for Library Improvement (Max 250 characters):</label><br>
-                <textarea id="suggestions" name="suggestions" rows="3" cols="40" maxlength="250" placeholder="Your suggestions..."></textarea>
-            </p>
-
-            
-        </fieldset>
-
-        <br>
-
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-
-
-
-
-
-
-
-    </from>
 </body>
 </html>
