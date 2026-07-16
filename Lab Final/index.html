@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthyLife Medical Center</title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>HealthyLife Medical Center</h1>
+    <h2>Patient Appointment Registration</h2>
+
+    <form id="appointmentForm">
+
+        
+        <label>First Name</label>
+        <input type="text" id="fname">
+        <span class="error" id="fnameError"></span>
+
+        
+        <label>Last Name</label>
+        <input type="text" id="lname">
+        <span class="error" id="lnameError"></span>
+
+        
+        <label>Email</label>
+        <input type="email" id="email">
+        <span class="error" id="emailError"></span>
+
+        
+        <label>Password</label>
+        <input type="password" id="password">
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword">
+        <span class="error" id="passwordError"></span>
+
+        
+        <label>Gender</label>
+
+        <div class="radio-group">
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <span class="error" id="genderError"></span>
+
+        
+
+
+        <label>Preferred Service</label>
+
+        <div class="checkbox-group">
+
+            <input type="checkbox" name="service" value="General"> General Checkup
+
+            <input type="checkbox" name="service" value="Dental"> Dental
+
+            <input type="checkbox" name="service" value="Eye"> Eye Care
+
+        </div>
+
+        <span class="error" id="serviceError"></span>
+
+        
+
+        <label>Doctor's Department</label>
+
+        <select id="department">
+
+            <option value="">Select Department</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Orthopedics</option>
+            <option>Medicine</option>
+
+        </select>
+
+        <span class="error" id="departmentError"></span>
+
+        
+
+        <label>Health Description</label>
+
+        <textarea id="description"></textarea>
+
+        <span class="error" id="descriptionError"></span>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <h3 id="successMessage"></h3>
+
+</div>
+
+<script src="SCRIPT.js"></script>
+
+</body>
+</html>

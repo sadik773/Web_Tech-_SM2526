@@ -1,0 +1,327 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+
+.container{
+
+    width:100%;
+    max-width:650px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    animation:fadeIn .8s ease;
+}
+
+/* 
+   HEADING */
+
+h1{
+
+    text-align:center;
+
+    color:#0B5ED7;
+
+    margin-bottom:8px;
+
+    font-size:32px;
+
+    font-weight:700;
+}
+
+h2{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+}
+
+/* 
+   LABEL */
+
+label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#333;
+}
+
+/* 
+   INPUT */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:2px solid #d9d9d9;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    background:#fafafa;
+
+    transition:.3s;
+}
+
+/* 
+   PLACEHOLDER
+ */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#999;
+
+    font-style:italic;
+}
+
+/* 
+   HOVER EFFECT*/
+
+input:hover,
+select:hover,
+textarea:hover{
+
+    border-color:#28a745;
+}
+
+/* 
+   FOCUS EFFECT */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#0B5ED7;
+
+    background:#eef6ff;
+
+    box-shadow:0 0 15px rgba(13,110,253,.35);
+
+    transform:scale(1.02);
+}
+
+/* 
+   VALID INPUT*/
+
+input:valid{
+
+    border-color:#198754;
+}
+
+/* 
+   INVALID INPUT*/
+
+input:invalid{
+
+    border-color:#dc3545;
+}
+
+/*
+   RADIO & CHECKBOX*/
+
+.radio-group,
+.checkbox-group{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:8px;
+
+    margin-bottom:5px;
+
+    align-items:center;
+}
+
+.radio-group input,
+.checkbox-group input{
+
+    width:auto;
+
+    transform:scale(1.2);
+
+    cursor:pointer;
+}
+
+/* 
+   TEXTAREA */
+
+textarea{
+
+    resize:none;
+
+    height:120px;
+}
+
+/* 
+   BUTTON */
+
+button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#0B5ED7,#084298);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+    background:linear-gradient(135deg,#198754,#157347);
+}
+
+button:active{
+
+    transform:scale(.98);
+}
+
+/* 
+   ERROR MESSAGE */
+
+.error{
+
+    color:#dc3545;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    display:block;
+
+    margin-top:5px;
+}
+
+/* 
+   SUCCESS MESSAGE*/
+
+#successMessage{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#198754;
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+/* 
+   ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+/*
+   RESPONSIVE*/
+
+@media(max-width:768px){
+
+.container{
+
+    padding:25px;
+}
+
+h1{
+
+    font-size:26px;
+}
+
+h2{
+
+    font-size:16px;
+}
+
+button{
+
+    font-size:16px;
+}
+
+.radio-group,
+.checkbox-group{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+}
+
+}
