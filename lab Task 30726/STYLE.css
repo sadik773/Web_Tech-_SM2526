@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #7f8c8d;
+}
+
+fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 0 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* Food Selection Styling */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: background-color 0.2s;
+}
+
+.food-item:hover {
+  background-color: #eef2f5;
+}
+
+.food-item input {
+  cursor: pointer;
+}
+
+/* Error message formatting */
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  min-height: 1.1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #219150;
+}
+
+/* Receipt / Output Box */
+.receipt {
+  margin-top: 25px;
+  background: #fafafa;
+  border: 1px dashed #27ae60;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.receipt.hidden {
+  display: none;
+}
+
+.success-banner {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.receipt h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.receipt hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.receipt p, .receipt-items {
+  margin-bottom: 8px;
+}
+
+.receipt-items ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.total-bill {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}

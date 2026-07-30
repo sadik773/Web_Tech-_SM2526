@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Café - Order Online</title>
+  <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Campus Café</h1>
+      <p>Place your online food order below</p>
+    </header>
+
+    <form id="orderForm" novalidate>
+      <!-- Customer Information Section -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="e.g. John Doe">
+          <span class="error-msg" id="fullNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="e.g. john@example.com">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="e.g. 01700000000">
+          <span class="error-msg" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" placeholder="e.g. 23-12345-1">
+          <span class="error-msg" id="studentIdError"></span>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </div>
+          <span class="error-msg" id="genderError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department">
+            <option value="">-- Select Department --</option>
+            <option value="CSE">CSE</option>
+            <option value="EEE">EEE</option>
+            <option value="BBA">BBA</option>
+            <option value="English">English</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="error-msg" id="departmentError"></span>
+        </div>
+      </fieldset>
+
+      <!-- Food Selection Section -->
+      <fieldset>
+        <legend>Food Selection</legend>
+
+        <div class="form-group">
+          <label>Select Items:</label>
+          <div class="food-grid">
+            <label class="food-item">
+              <input type="checkbox" name="food" value="Burger" data-price="5">
+              <span>Burger ($5)</span>
+            </label>
+            <label class="food-item">
+              <input type="checkbox" name="food" value="Pizza" data-price="8">
+              <span>Pizza ($8)</span>
+            </label>
+            <label class="food-item">
+              <input type="checkbox" name="food" value="Sandwich" data-price="4">
+              <span>Sandwich ($4)</span>
+            </label>
+            <label class="food-item">
+              <input type="checkbox" name="food" value="French Fries" data-price="3">
+              <span>French Fries ($3)</span>
+            </label>
+            <label class="food-item">
+              <input type="checkbox" name="food" value="Coffee" data-price="2">
+              <span>Coffee ($2)</span>
+            </label>
+            <label class="food-item">
+              <input type="checkbox" name="food" value="Cold Drink" data-price="2">
+              <span>Cold Drink ($2)</span>
+            </label>
+          </div>
+          <span class="error-msg" id="foodError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" value="1" min="1">
+          <span class="error-msg" id="quantityError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="instructions">Special Instructions (Optional)</label>
+          <textarea id="instructions" rows="3" placeholder="Any special requests?"></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="submitBtn">Place Order</button>
+    </form>
+
+    <!-- Order Summary / Receipt Section -->
+    <div id="orderReceipt" class="receipt hidden">
+      <div class="success-banner">Order placed successfully!</div>
+      <h2>Order Receipt</h2>
+      <hr>
+      <p><strong>Customer Name:</strong> <span id="resName"></span></p>
+      <p><strong>Student ID:</strong> <span id="resStudentId"></span></p>
+      <p><strong>Department:</strong> <span id="resDepartment"></span></p>
+      <div class="receipt-items">
+        <strong>Selected Items:</strong>
+        <ul id="resItemsList"></ul>
+      </div>
+      <p><strong>Quantity:</strong> <span id="resQuantity"></span></p>
+      <hr>
+      <p class="total-bill"><strong>Total Bill:</strong> $<span id="resTotal"></span></p>
+    </div>
+  </div>
+
+  <script src="SCRIPT.js"></script>
+</body>
+</html>
